@@ -1,5 +1,20 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // 获取保存ID的按钮元素
+  // 显示玩家ID
+  const playerId = localStorage.getItem('playerId');
+  if (playerId) {
+      const playerDisplay = document.getElementById('playerDisplay');
+      playerDisplay.innerText = '玩家ID: ' + playerId;
+  }
+  // 显示游戏历史
+  const gameHistory = JSON.parse(localStorage.getItem('gameHistory')) || [];
+  const historyDisplay = document.getElementById('gameHistoryDisplay');
+  gameHistory.forEach((entry, index) => {
+      const p = document.createElement('p');
+      p.innerText = `历史记录 ${index + 1}: ${entry}`;
+      historyDisplay.appendChild(p);
+  });
+
+  // 获取保存ID的按钮元素
     const saveIdButton = document.getElementById('saveIdButton');
     // 为保存ID的按钮添加点击事件监听器
     saveIdButton.addEventListener('click', function() {
