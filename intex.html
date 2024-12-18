@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>寻宝游戏</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- 开始游戏按钮 -->
+  <button id="startButton">开始寻宝</button>
+  <button id="musicControlButton">播放/暂停音乐</button>
+  <!-- 玩家输入ID的输入框 -->
+<input type="text" id="playerIdInput" placeholder="请输入您的玩家ID">
+<!-- 提交按钮，点击后将保存玩家ID -->
+<button id="saveIdButton">保存ID</button>
+<!-- 显示游戏状态的区域 -->
+  <div id="status"></div>
+  <!-- 寻宝地图容器 -->
+  <div id="treasureMap">
+    <!-- 寻宝步骤的元素 -->
+    <div id="clue" class="step"></div>
+    <div id="decoded" class="step"></div>
+    <div id="puzzle" class="step"></div>
+    <div id="traps" class="step"></div>
+    <div id="door" class="step"></div>
+    <div id="box" class="step"></div>
+    <div id="guard" class="step"></div>
+    <div id="treasure" class="step"></div>
+  </div>
+  <!-- 背景音乐 -->
+  <audio autoplay loop id="backgroundMusic">
+    <source src="music.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <!-- 引入JavaScript文件 -->
+  <script src="treasure.js"></script>
+</body>
+</html>

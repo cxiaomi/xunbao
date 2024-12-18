@@ -1,0 +1,62 @@
+/* styel.css */
+#treasureMap {
+  width: 500px;
+  height: 300px;
+  border: 1px solid black;
+  position: relative;
+  overflow: hidden;
+}
+
+.step {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  border-radius: 50%;
+  border: 2px solid #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: white;
+  background-color: red;
+}
+
+/* 为每个步骤添加特定的图案 */
+#clue::before {
+  content: '\1F50D'; /* 放大镜 */
+}
+
+#decoded::before {
+  content: '\1F5C3'; /* 向下的箭头 */
+}
+
+#puzzle::before {
+  content: '\1F9E9'; /* 拼图 */
+}
+
+#traps::before {
+  content: '\26D4'; /* 禁止进入 */
+}
+
+#door::before {
+  content: '\1F6AA'; /* 门 */
+}
+
+#box::before {
+  content: '\1F4E6'; /* 邮件箱 */
+}
+
+#treasure::before {
+  content: '\1F48E'; /* 宝石 */
+}
+
+#startButton {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+#status {
+  margin-top: 20px;
+  font-size: 16px;
+}
